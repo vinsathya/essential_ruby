@@ -17,4 +17,27 @@
 # Your code to define the method goes here.
 # =========================================
 
-puts "Your monthly payment will be #{pmt(0.01, 60, 30000)}."
+def pmt(ir,nper,pv)
+	c = (pv*ir*((1+ir)**nper))/(((1+ir)**nper)-1)
+
+	return c
+end
+
+#puts "Your monthly payment will be $#{pmt(0.01, 60, 30000)}."
+
+
+#=============================================
+#testing code block
+
+# puts "Enter the interest rate:"
+# ir = gets.chomp.to_f
+
+# puts "Enter the number of payments:"
+# nper = gets.chomp.to_i
+
+# puts "Enter the loan amount:"
+# pv = gets.chomp.to_f
+
+# puts "Your monthly payment will be $#{c}."
+#===============================================
+
